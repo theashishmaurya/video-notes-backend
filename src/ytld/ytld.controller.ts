@@ -2,7 +2,7 @@ import { Controller, Get, Query, Res } from '@nestjs/common';
 import * as ytdl from 'ytdl-core';
 import { Response } from 'express';
 
-@Controller('ytld')
+@Controller('ytdl')
 export class YtldController {
   @Get('/mp3')
   async downloadAudio(@Query('url') url: string, @Res() res: Response) {
