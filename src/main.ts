@@ -11,6 +11,8 @@ async function bootstrap() {
     preflightContinue: false,
     optionsSuccessStatus: 204,
   });
-  await app.listen(8000);
+  await app.listen(8000).then(() => {
+    console.log('Server is running on port 8000');
+  });
 }
 bootstrap();
